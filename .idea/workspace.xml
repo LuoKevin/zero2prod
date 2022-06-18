@@ -11,9 +11,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/subscriptions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/subscriptions.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/startup.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/startup.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/app_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/health_check.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +48,7 @@
     <setting file="file://$PROJECT_DIR$/src/main.rs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/routes/subscriptions.rs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/startup.rs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/health_check_test.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/health_check.rs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
@@ -74,11 +77,12 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.cargo.check&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -87,7 +91,7 @@
       <command value="cargo check" />
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.rest-api_3 | #1">
+  <component name="RunManager" selected="Cargo.run_with_trace">
     <configuration name="Test subscribe_returns_200_for_valid_form_data" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package zero2prod --test health_check_test subscribe_returns_200_for_valid_form_data -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -96,6 +100,7 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -112,8 +117,28 @@
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
       <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_with_trace" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs>
+        <env name="RUST_LOG" value="trace" />
+      </envs>
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -126,8 +151,20 @@
     <configuration name="rest-api_3 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_3.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="rest-api_4 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_4.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.run_with_trace" />
+      <item itemvalue="Cargo.check" />
+      <item itemvalue="Cargo.Test subscribe_returns_200_for_valid_form_data" />
+      <item itemvalue="HTTP Request.rest-api_2 | #1" />
+      <item itemvalue="HTTP Request.rest-api_3 | #1" />
+      <item itemvalue="HTTP Request.rest-api_4 | #1" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api_4 | #1" />
         <item itemvalue="HTTP Request.rest-api_3 | #1" />
         <item itemvalue="HTTP Request.rest-api_2 | #1" />
         <item itemvalue="Cargo.Test subscribe_returns_200_for_valid_form_data" />
@@ -162,7 +199,12 @@
       <workItem from="1650946149019" duration="2659000" />
       <workItem from="1651015297916" duration="5721000" />
       <workItem from="1651621373937" duration="1866000" />
-      <workItem from="1652725871826" duration="2056000" />
+      <workItem from="1652725871826" duration="3687000" />
+      <workItem from="1652807631123" duration="18145000" />
+      <workItem from="1654184421132" duration="30000" />
+      <workItem from="1655242076112" duration="600000" />
+      <workItem from="1655301766862" duration="1198000" />
+      <workItem from="1655322744954" duration="20767000" />
     </task>
     <servers />
   </component>
