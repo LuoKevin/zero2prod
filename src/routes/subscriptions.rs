@@ -2,7 +2,6 @@ use actix_web::{HttpResponse, web};
 use sqlx::PgPool;
 use chrono::Utc;
 use uuid::Uuid;
-use tracing::Instrument;
 
 #[tracing::instrument(
 name = "Adding a new subscriber",
@@ -16,9 +15,6 @@ pub async fn subscribe(
     form: web::Form<SubscriberFormData>,
     pool: web::Data<PgPool>,
 ) -> HttpResponse {
-    let query_span = tracing::info_span!(
-        "Saving new subscriber details in the database"
-    );
     match insert_subscriber(&pool, &form).await
     {
         Ok(_) => {
