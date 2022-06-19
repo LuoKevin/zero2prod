@@ -9,14 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c36c3a-4a31-44ca-9f14-55f16da86947" name="Changes" comment="# See links to relevant web pages, issue trackers, blog articles, etc.&#10;See: [Tech Org Jira]&#10;(https://gablex.atlassian.net/jira/software/projects/GTO/boards/1)&#10;&#10;# Why is this change happening, e.g. goals, use cases, stories, etc.?&#10;Why:&#10;&#10;# How is this change happening, e.g. implementations, algorithms, etc.?&#10;How:&#10;&#10;# Tags suitable for searching, such as hashtags, keywords, etc.&#10;Tags:">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configuration.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/subscriptions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/subscriptions.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startup.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/startup.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telemetry.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/telemetry.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,26 +84,9 @@
       <command value="cargo check" />
     </option>
   </component>
-  <component name="RunManager" selected="Cargo.run_with_trace">
+  <component name="RunManager" selected="Docker.Dockerfile builder">
     <configuration name="Test subscribe_returns_200_for_valid_form_data" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package zero2prod --test health_check_test subscribe_returns_200_for_valid_form_data -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="check" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="check" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -154,21 +130,33 @@
     <configuration name="rest-api_4 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_4.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile builder" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="rust1.59.0_builder" />
+          <option name="buildCliOptions" value="--target builder" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Cargo.run_with_trace" />
-      <item itemvalue="Cargo.check" />
       <item itemvalue="Cargo.Test subscribe_returns_200_for_valid_form_data" />
+      <item itemvalue="Docker.Dockerfile builder" />
       <item itemvalue="HTTP Request.rest-api_2 | #1" />
       <item itemvalue="HTTP Request.rest-api_3 | #1" />
       <item itemvalue="HTTP Request.rest-api_4 | #1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile builder" />
         <item itemvalue="HTTP Request.rest-api_4 | #1" />
         <item itemvalue="HTTP Request.rest-api_3 | #1" />
         <item itemvalue="HTTP Request.rest-api_2 | #1" />
         <item itemvalue="Cargo.Test subscribe_returns_200_for_valid_form_data" />
-        <item itemvalue="Cargo.check" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +192,7 @@
       <workItem from="1654184421132" duration="30000" />
       <workItem from="1655242076112" duration="600000" />
       <workItem from="1655301766862" duration="1198000" />
-      <workItem from="1655322744954" duration="28455000" />
+      <workItem from="1655322744954" duration="29689000" />
     </task>
     <servers />
   </component>
