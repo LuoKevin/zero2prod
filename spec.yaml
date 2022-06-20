@@ -1,6 +1,5 @@
 name: zero2prod
-
-region: nyc1
+region: nyc
 services:
   - name: zero2prod
     dockerfile_path: Dockerfile

@@ -2,7 +2,6 @@ use secrecy::{ExposeSecret, Secret};
 use sqlx::ConnectOptions;
 use sqlx::postgres::PgSslMode;
 use sqlx::postgres::PgConnectOptions;
-use tracing::log::LevelFilter;
 use serde_aux::field_attributes::deserialize_number_from_string;
 
 #[derive(serde::Deserialize)]

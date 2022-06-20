@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2c36c3a-4a31-44ca-9f14-55f16da86947" name="Changes" comment="# See links to relevant web pages, issue trackers, blog articles, etc.&#10;See: [Tech Org Jira]&#10;(https://gablex.atlassian.net/jira/software/projects/GTO/boards/1)&#10;&#10;# Why is this change happening, e.g. goals, use cases, stories, etc.?&#10;Why:&#10;&#10;# How is this change happening, e.g. implementations, algorithms, etc.?&#10;How:&#10;&#10;# Tags suitable for searching, such as hashtags, keywords, etc.&#10;Tags:">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/configuration.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +192,7 @@
       <workItem from="1654184421132" duration="30000" />
       <workItem from="1655242076112" duration="600000" />
       <workItem from="1655301766862" duration="1198000" />
-      <workItem from="1655322744954" duration="36358000" />
+      <workItem from="1655322744954" duration="37065000" />
     </task>
     <servers />
   </component>
