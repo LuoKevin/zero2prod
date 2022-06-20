@@ -17,10 +17,7 @@ async fn main() -> std::io::Result<()> {
     let configuration = get_configuration().expect("No config available, idiot.");
     let connection_pool = PgPoolOptions::new()
         .connect_timeout(std::time::Duration::from_secs(2))
-        .connect_lazy(
-            &configuration.database.connection_string().expose_secret()
-        )
-        .expect("No can connect to Postgres :(");
+        .connect_lazy_with(configuration.database.with_db());
 
     let address = format!("{}:{}",
                           configuration.application.host, configuration.application.port);
